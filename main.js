@@ -1,5 +1,6 @@
 const canvas = document.getElementById("screen")
 const ctx = canvas.getContext("2d")
+var display = {startWidth:1280, aspectRatio:[4,3], scale:0}
 
 function tick(){
     requestAnimationFrame(tick)
