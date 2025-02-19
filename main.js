@@ -1,16 +1,22 @@
 const canvas = document.getElementById("screen")
 const ctx = canvas.getContext("2d")
+
+//------ Progect Settings ------
 var display = {startWidth:1280, aspectRatio:[4,3], scale:0}
 
-function Init(){
-    requestAnimationFrame(tick)
 
+
+import { game as gameI } from "./game/import.js"
+var game = new gameI()
+function load(){
+    requestAnimationFrame(tick)
+    game.load()
 }
 
 function tick(){
     requestAnimationFrame(tick)
     resize()
-    
+    game.tick()
 }
 
 function resize(){
@@ -23,4 +29,6 @@ function resize(){
     ctx.scale(ctx.canvas.width/display.startWidth,ctx.canvas.width/display.startWidth)
     display.scale=ctx.canvas.width/display.startWidth
 }
-Init()
+
+
+load()
