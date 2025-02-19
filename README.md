@@ -1,2 +1,2 @@
-# game-template
-template to help make games faster
+# Yet Another Game Engine
+making a reusable engine because why not
