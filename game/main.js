@@ -3,10 +3,10 @@ export class Main{
     constructor(Game){
         this.game = Game
     }
-    tick(){
+    load(){
 
     }
-    load(){
+    tick(){
 
     }
 }
