@@ -3,7 +3,7 @@
 
 all code shown will be based on the tick function in /game/main.js
 
-[how to use](https://github.com/loglot/Yet-Another-Game-Engine/edit/main/README.md#how-to-use)
+[how to use](https://github.com/loglot/Yet-Another-Game-Engine?tab=readme-ov-file#how-to-use)
 
 # Shapes
 this engine makes great use of shapes, here are example shapes and how they can be used!
