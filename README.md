@@ -14,7 +14,16 @@ this engine makes great use of shapes, here are example shapes and how they can 
 var Rect = {TYPE:"Rect",X:0,Y:0,W:50,H:50}
 var Circ = {TYPE:"Circ",X:80,Y:0,R:50}
 this.game.LIB.test.colide(Rect,Circ) // returns: true
-this.game.LIB.draw.DrawShape(Rect,"#ffa",5,ctx) // makes a yellow square at Rects position and size
+
+                 //DrawShape(Shape, (Color : optional, defaults to white), (Padding : optional, defaults to 0), (Context : optional, defaults to basic screen))
+this.game.LIB.draw.DrawShape(Rect,"#ffa",5,ctx) // makes a yellow square at Rects position and size with a padding of 5
+this.game.LIB.draw.DrawShape(Circ,"#aff",0) // makes a cyan Circle at Circs position and size with a padding of 0, this circle overlaps the rectangle
 ```
 
+# Keyboard Input
+this uses the keydrown key state handler, slightly modified, full info on that [here](https://jeremyckahn.github.io/keydrown/)
+## Basics of Keydrown
+```javascript
+if(kd.W.isDown()) // executes if W is down
+```
 
