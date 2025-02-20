@@ -1,4 +1,4 @@
-/*! keydrown - v1.2.7 - 2018-12-19 - http://jeremyckahn.github.com/keydrown */
+/*! keydrown - v1.2.8 - 2025-02-20 - http://jeremyckahn.github.com/keydrown */
 ;(function (window) {
 
   var util = (function () {
@@ -189,9 +189,7 @@
     'DELETE': 46,
     'TAB': 9,
     'TILDE': 192,
-    'BACKSLASH': 220,
-    'PLUS': 187,
-    'MINUS': 189
+    'CTRL': 17,
   };
   
   
@@ -280,6 +278,27 @@
      */
     Key.prototype.isDown = function () {
       return util.indexOf(keysDown, this.keyCode) !== -1;
+    };
+  
+  
+    /**
+     * Returns whether the key was just pressed.
+     *
+     * @method justPressed
+     * @return {boolean} True if the key was just pressed, otherwise false.
+     */
+    Key.prototype.justPressed = function () {
+      if(util.indexOf(keysDown, this.keyCode) !== -1){
+        if(Key.pressed){
+          return false
+        }
+        Key.pressed = true
+        return true
+      }
+      Key.pressed = false
+      return false
+      
+      // return util.indexOf(keysDown, this.keyCode) !== -1;
     };
   
   
@@ -424,19 +443,6 @@
   
       previousUpdateTime = currentTime;
     };
-    kd.JustPressed = function (Key) {
-      if(Key.isDown()){
-        if(!Key.WasPressed){
-          
-        Key.WasPressed=true
-          return(true)
-        }
-        return(false)          
-      }
-      Key.WasPressed=false
-      return(false)
-
-    }
   
   
     /**

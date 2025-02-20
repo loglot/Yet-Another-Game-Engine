@@ -39,15 +39,11 @@ this.position.changeFriction(0,.5,"=") // sets vertical friction to .5
 ```
 
 # Keyboard Input
-this uses the keydrown key state handler, slightly modified, full info on that [here](https://jeremyckahn.github.io/keydrown/)
+this uses the keydrown key state handler, full info on that [here](https://jeremyckahn.github.io/keydrown/)
 ### Basics of Keydrown
 ```javascript
 if(kd.W.isDown()) // executes if W is down
-```
-### Modifications For This Engine
-```javascript
-// kd.JustPressed({KD Key Object})
-if(kd.JustPressed(kd.W) // executes if W was just pressed
+if(kd.W.justPressed()) // executes if W was just pressed
 ```
 
 # Controller Input
